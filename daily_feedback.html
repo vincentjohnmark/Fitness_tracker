@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Feedback - AI Fitness Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="daily_feedback.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1 class="slide-in-left">AI Fitness Tracker</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" onclick="navigateTo('daily-feedback')">Daily Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Daily Feedback Form -->
+    <main>
+        <div class="container">
+            <h2>Daily Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="food">What did you eat today?</label>
+                    <textarea id="food" name="food" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="exercise">What exercise did you do today?</label>
+                    <textarea id="exercise" name="exercise" rows="4" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fitness Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <h2 class="slide-in-left">Fitness Tracker</h2>
+            <ul class="links">
+                <li><a href="#" onclick="scrollToSection('hero')">Home</a></li>
+                <li><a href="#" onclick="scrollToSection('features')">Features</a></li>
+                <li><a href="#" onclick="scrollToSection('about')">About Us</a></li>
+                <li><a href="#" onclick="scrollToSection('contact')">Contact</a></li>
+            </ul>
+            <button class="login-btn" onclick="openLogin()">Login</button>
+          
+        </nav>
+    </header>
+     <!-- Hero Section -->
+     <section id="hero" class="section hero active">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="zoom-in">Track Your Fitness Journey</h2>
+            <p>Monitor your workouts, set goals, and achieve your fitness targets with personalized insights.</p>
+            <button class="cta-btn" onclick="scrollToSection('features')">Explore Features</button>
+        </div>
+    </section>
+    <div class="blur-bg-overlay"></div>
+    <!-- Modal for Login -->
+    <div class="form-popup" style="display: none;">
+        <div class="form-box login" >
+            <button class="close-btn">X</button>
+            <div class="form-details">
+                <h2>Welcome Back</h2>
+                <p>Please Log in using your personal information to stay connected with us.</p>
+            </div>
+            <div class="form-content">
+                <h2>LOGIN</h2>
+                <form id="loginForm" action="profile_setup.html">
+                    <div class="input-field">
+                        <input type="text" required name="Email" id="loginEmail">
+                        <label>Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" required name="Password" id="loginPassword">
+                        <label>Password</label>
+                    </div>
+                    <a href="#" class="forgot-pass">Forgot your password?</a>
+                    <!-- Modify the button to trigger the JS function -->
+                    <button type="submit" class="login-btn" onclick="submitLogin()">Log In</button>
+                </form>                                
+                <div class="bottom-link">
+                    Don't have an account?
+                    <a href="#" id="signup-link">Signup</a>
+                </div>
+            </div>
+        </div>
+        <div class="form-box signup">
+            <button class="close-btn">X</button>
+            <div class="form-details">
+                <h2>Create Account</h2>
+                <p>Please Sign Up using your personal information to connect with us.</p>
+                <div class="form-content">
+                    <h2>SIGNUP</h2>
+                    <form id="signupForm">
+                        <div class="input-field">
+                            <input type="text" required name="UserName" id="signupUsername">
+                            <label>Create a username</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" required name="Email" id="signupEmail">
+                            <label>Enter your Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required name="Password" id="signupPassword">
+                            <label>Create a Password</label>
+                        </div>
+                        <div class="policy-text">
+                            <input type="checkbox" id="policy" required>
+                            <label for="policy">
+                                I agree to the
+                                <a href="#">Terms&Conditions</a>
+                            </label>
+                        </div>
+                        <!-- Modify the button to trigger the JS function -->
+                        <button type="button" class="signup-btn" onclick="submitSignup()">Sign Up</button>
+                    </form>                                        
+                    <div class="bottom-link">
+                        Already have an account?
+                        <a href="#" id="login-link">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Features Section -->
+    <section id="features" class="section features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-box hover-slide">
+                    <h3>Goal Setting</h3>
+                    <p>Set and track your fitness goals with ease.</p>
+                </div>
+                <div class="feature-box hover-slide">
+                    <h3>Progress Tracking</h3>
+                    <p>Monitor your progress with real-time data and detailed reports.</p>
+                </div>
+                <div class="feature-box hover-slide">
+                    <h3>Exercise Logging</h3>
+                    <p>Log your exercises, track workouts, and stay on top of your routine.</p>
+                </div>
+                <div class="feature-box hover-slide">
+                    <h3>Diet Tracking</h3>
+                    <p>Monitor what you eat and track your calorie intake as per your goal.</p>
+                </div>
+                <div class="feature-box hover-slide">
+                    <h3>Customizable Plans</h3>
+                    <p>Receive personalized workout plans based on your fitness level.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signup Prompt Section -->
+    <section id="signup-bar" class="section signup">
+        <div class="container">
+            <h2 class="slide-up">Ready to Transform Your Fitness?</h2>
+            <!-- Updated button to link to the profile setup page -->
+            <a href="#"><button class="cta-btn">Sign Up</button></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section" id="contact">
+        <div class="container">
+            <p>&copy; 2024 AI Fitness Tracker. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

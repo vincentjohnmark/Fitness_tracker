@@ -1,0 +1,177 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -1px -1px 2px #fff;
+    background: url('progress-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden; 
+}
+
+.suggestions {
+    color: #000000;
+}
+
+.suggestions h2 {
+    color: #fff;
+}
+
+.input-box {
+    color: #000000;
+}
+.floating-label{
+    font-size: larger;
+    font-weight: bold;
+}
+input{
+    height: 50px;
+    border-radius: 10px;
+    width: 152px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: url('progress-cover.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.suggestion-box, .input-box {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.suggestion-box ul, .input-box ul {
+    list-style-type: none;
+}
+
+
+button{
+    margin-top: 10px;
+    padding: 10px;
+   
+    border: none;
+    background-color: #05b02d;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: #0f862b;
+}
+.show{
+    display: block;
+}
+/* Circle Progress Charts */
+.circle-chart {
+    margin-top: 20px;
+    text-align: center;
+}
+
+canvas {
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+}
+
+/* Exercise section styles */
+#exercise-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center the items */
+    margin-top: 20px;
+}
+
+.exercise {
+    border: 1px solid #ddd; /* Add a border for better distinction */
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f9f9f9; /* Light background for exercises */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the text */
+    width: 200px; /* Set a fixed width */
+}
+
+.exercise img {
+    width: 100%; /* Make the image responsive */
+    border-radius: 8px; /* Round the image corners */
+}
+/* Food Intake section styles */
+
+#food-suggestions {
+    display: flex;
+    flex-wrap: wrap; /* Allow food suggestions to wrap */
+    justify-content: center; /* Center the items */
+    margin-top: 20px;
+}
+
+.food-item {
+    border: 1px solid #ddd; /* Border for food items */
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f9f9f9; /* Light background for food items */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the text */
+    width: 200px; /* Set a fixed width */
+}
+
+.food-item img {
+    width: 100%; /* Make the image responsive */
+    border-radius: 8px; /* Round the image corners */
+}
+
+/* Added styles for alignment of food and workout items list */
+#added-foods-container, #added-workouts-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#added-foods-list, #added-workouts-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-right: 20px;
+}
+
+#added-foods-list li, #added-workouts-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#added-foods-list img, #added-workouts-list img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+.suggested-item {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f0f0f0;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.suggested-item:hover {
+    background-color: #e0e0e0;
+}

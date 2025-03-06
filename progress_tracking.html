@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Tracking</title>
+    <link rel="stylesheet" href="progress_tracking.css">
+    <script defer src="progress_tracking.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Track Your Progress</h1>
+
+        <!-- Goal Section -->
+        <div class="goal-setup">
+            <h2>Set Your Goal</h2>
+            <label for="current-weight" class="floating-label">Current Weight (kg):</label>
+            <input type="number" id="current-weight" placeholder="Enter your current weight">
+            <label for="goal-weight" class="floating-label">Goal Weight (kg):</label>
+            <input type="number" id="goal-weight" placeholder="Enter your goal weight">
+            <button id="suggestions-btn">Get Workout & Food Suggestions</button>
+        </div>
+
+        <!-- Workout and Food Suggestions -->
+        <div class="suggestions">
+            <h2>Workout & Food Suggestions</h2>
+            <div id="workout-suggestions" class="suggestion-box">
+                <h3>Workout Suggestions:</h3>
+                <ul></ul>
+            </div>
+            <div id="food-suggestions" class="suggestion-box">
+                <h3>Food Suggestions:</h3>
+                <div id="food-container">
+                    <!-- Food items will be dynamically inserted here -->
+                </div>
+                
+                <ul></ul>
+            </div>
+
+        </div>
+        <!-- Food Details Modal -->
+
+        <!-- Input Section for Food & Workout Tracking -->
+        <div class="tracking-section">
+            <h2>Track Your Day</h2>
+
+            <!-- Food Input -->
+            <div class="input-box">
+                <h3>Food Intake</h3>
+                <label for="food-name" class="floating-label">Food Name:</label>
+                <input type="text" id="food-name" placeholder="Enter food name">
+                <label for="food-quantity" class="floating-label">Quantity (Small/Medium/Large):</label>
+                <input type="text" id="food-quantity" placeholder="Enter quantity">
+                <button id="add-food">Add Food</button>
+
+                <!-- Display section for foods added -->
+                <h4>Added Foods</h4>
+                <ul id="added-foods-list"></ul>
+
+                <!-- Progress Circle Chart for Calories Consumed -->
+                <div class="circle-chart">
+                    <h4>Calories Consumed</h4>
+                    <canvas id="caloriesConsumedChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Workout Input -->
+            <div class="input-box">
+                <h3>Workout/Exercise</h3>
+                <label for="workout-name" class="floating-label">Workout Name:</label>
+                <input type="text" id="workout-name" placeholder="Enter workout name">
+                <label for="workout-duration" class="floating-label">Duration (Minutes):</label>
+                <input type="number" id="workout-duration" placeholder="Enter duration">
+                <button id="add-workout">Add Workout</button>
+
+                <!-- Display section for workouts added -->
+                <h4>Added Workouts</h4>
+                <ul id="added-workouts-list"></ul>
+
+                <!-- Progress Circle Chart for Calories Burned -->
+                <div class="circle-chart">
+                    <h4>Calories Burned</h4>
+                    <canvas id="caloriesBurnedChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Goal Achievement Prediction -->
+        <div class="goal-prediction">
+            <h2>Goal Achievement</h2>
+            <p id="goal-estimation">You will reach your goal in approximately <span id="days-left"></span> days.</p>
+        </div>
+    </div>
+    <!-- Food Details Modal -->
+<div id="foodDetailsModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background-color:white; padding:20px; border-radius:8px; box-shadow:0 4px 8px rgba(0, 0, 0, 0.3); z-index:1000;">
+    <span id="closeModal" style="cursor:pointer; position:absolute; top:10px; right:10px; font-size:20px;">&times;</span>
+    <h3 id="foodName"></h3>
+    <img id="foodImage" src="" alt="Food Image" style="width:150px; height:150px;">
+    <p id="foodDetails"></p>
+</div>
+
+<!-- Optional overlay to dim background when modal is open -->
+<div id="modalOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.5); z-index:999;"></div>
+
+</body>
+</html>

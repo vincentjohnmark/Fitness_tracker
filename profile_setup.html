@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Setup</title>
+    <link rel="stylesheet" href="profile_setup.css">
+</head>
+<body>
+
+
+   <div class="wrapper">
+        <!-- First Form -->
+         <div class="form-container" id="form-1">
+            <h2>Personal Details</h2>
+            <form>
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Middle Name" required>
+                <input type="text" placeholder="Last Name" required>
+                <input type="date" id="dob" placeholder="Date of Birth" required min="1950-01-01" max="2024-01-01">
+                <div class="age-display"></div>
+                <input type="tel" placeholder="Mobile Number" required>
+                <button type="button" class="next-btn">Next</button>
+            </form>
+        </div>
+         <!-- Second Form -->
+        <div class="form-container hidden" id="form-2">
+            <h2>Physical Stats</h2>
+            <form>
+                <input type="number" placeholder="Weight (kg)" required>
+                <input type="number" placeholder="Height (ft)" required>
+                <button type="button" class="next-btn">Next</button>
+            </form>
+        </div>
+        <!-- Third Form -->
+        <div class="form-container hidden" id="form-3">
+            <h2>Health Goals</h2>
+            <form action="progress_tracking.html">
+                <select required>
+                    <option value="" disabled selected>How often do you work out?</option>
+                    <option value="daily">Daily</option>
+                     <option value="weekly">Weekly</option>
+                    <option value="rarely">Rarely</option>
+                </select>
+                <select required>
+                    <option value="" disabled selected>How often do you eat outside food?</option>
+                    <option value="often">Often</option>
+                    <option value="sometimes">Sometimes</option>
+                    <option value="rarely">Rarely</option>
+                </select>
+                <select multiple required>
+                    <option value="lose_weight">Lose Weight</option> 
+                    <option value="gain_weight">Gain Weight</option>
+                    <option value="gain_muscle">Gain Muscle</option>
+                    <option value="stay_consistent">Stay Consistent</option>
+                    <option value="get_strong">Get Strong</option>
+                    <option value="eat_healthy">Eat Healthy</option>
+                </select>
+                <button type="submit" class="next-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="profile_setup.js"></script>
+</body>
+</html>

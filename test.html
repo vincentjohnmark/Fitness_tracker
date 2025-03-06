@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Key Test</title>
+</head>
+<body>
+    <h1>API Key Test</h1>
+    <button id="test-spoonacular">Test Spoonacular API Key</button>
+    <button id="test-exercisedb">Test ExerciseDB API Key</button>
+    <pre id="result"></pre>
+
+    <script>
+        const spoonacularApiKey = 'f2ca458dcd1b4c8c9009c166e03cd58a';
+        const exerciseDbApiKey = '20ab747536msh046cb5e8e449c2cp16d906jsn15016151d6aa';
+
+        document.getElementById("test-spoonacular").addEventListener("click", async () => {
+            try {
+                const response = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${spoonacularApiKey}`);
+                const data = await response.json();
+                document.getElementById("result").textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById("result").textContent = `Error: ${error}`;
+            }
+        });
+
+        document.getElementById("test-exercisedb").addEventListener("click", async () => {
+            try {
+                const response = await fetch(`https://exercisedb.p.rapidapi.com/exercises`, {
+                    method: 'GET',
+                    headers: {
+                        'x-rapidapi-host': 'exercisedb.p.rapidapi.com',
+                        'x-rapidapi-key': exerciseDbApiKey
+                    }
+                });
+                const data = await response.json();
+                document.getElementById("result").textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById("result").textContent = `Error: ${error}`;
+            }
+        });
+    </script>
+</body>
+</html>
